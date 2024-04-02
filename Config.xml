@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="mysample" class="springcoreXml.Sample"></bean>
+	
+	<bean id="myperson" class="springcoreXml.Person">
+	<property name="name" value="Rukesh"></property>
+	<property name="age" value="22"></property>
+	</bean>
+	
+    <bean id="mystudent" class="springcoreXml.Student">
+    <constructor-arg name="id" value="1"></constructor-arg>
+    <constructor-arg name="name" value="rukesh"></constructor-arg>
+    </bean>
+    
+    <bean id="myengine" class="springcoreXml.Engine">
+    <property name="engid" value="123"></property>
+    </bean>
+    
+    <bean id="mycar" class="springcoreXml.Car">
+     <property name="brand" value="BMW"></property>
+      <property name="price" value="560000"></property>
+       <property name="e" ref="myengine"></property>
+    </bean>
+    
+    
+
+</beans>
